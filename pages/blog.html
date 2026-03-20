@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Arkigreen Architecture</title>
+    <meta name="description"
+        content="Thought leadership on sustainable architecture, green building materials, and the future of design from the Arkigreen team.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+
+<body>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <aside class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" style="text-decoration:none;line-height:0;">
+                <img src="../assets/images/logo.svg" alt="Arkigreen Logo"
+                    style="height: 40px; width: auto; display: block;">
+            </a>
+            <button class="theme-btn" id="close-drawer" aria-label="Close menu" style="padding:0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="home2.html" class="nav-link">Home 2</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="blog.html" class="nav-link active">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="dashboard.html" class="nav-link">Client Portal</a>
+            <button class="theme-btn" id="theme-toggle-mobile" aria-label="Toggle theme">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                        d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2m-1.42-7.78l-1.42 1.42M5.64 18.36l-1.42 1.42" />
+                </svg>
+            </button>
+        </nav>
+        <a href="login.html" class="btn btn-primary">Login</a>
+    </aside>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" style="text-decoration:none;line-height:0;">
+                <img src="../assets/images/logo.svg" alt="Arkigreen Logo"
+                    style="height: 40px; width: auto; display: block;">
+            </a>
+            <!-- FIX 1: Client Portal added to desktop nav -->
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home2.html" class="nav-link">Home 2</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="dashboard.html" class="nav-link">Client Portal</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2m-1.42-7.78l-1.42 1.42M5.64 18.36l-1.42 1.42" />
+                    </svg>
+                </button>
+                <a href="login.html" class="btn btn-outline" id="login-btn">Login</a>
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section
+            style="position:relative;min-height:380px;display:flex;align-items:center;padding:6rem 0 3rem;overflow:hidden;">
+            <div style="position:absolute;inset:0;z-index:0;">
+                <img src="https://images.unsplash.com/photo-1464082354059-27db6ce50048?w=1920&q=80" alt=""
+                    style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.4);">
+                <div style="position:absolute;inset:0;background:rgba(5,10,8,0.72);"></div>
+            </div>
+            <div class="container" style="position:relative;z-index:1;">
+                <div class="section-header" data-aos="fade-up">
+                    <p class="text-brass" style="font-size:0.85rem;letter-spacing:0.2em;margin-bottom:1rem;">INSIGHTS
+                    </p>
+                    <h1 class="display-font" style="font-size:4rem;color:#ffffff;">Ideas that Build the Future</h1>
+                    <p style="max-width:650px;margin:1.5rem auto 0;color:rgba(255,255,255,0.75);">Latest thinking on
+                        sustainability, material science, bioclimatic design, and the future of building from the
+                        Arkigreen team.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Post -->
+        <section>
+            <div class="container">
+                <div class="features-grid" data-aos="fade-up">
+                    <div
+                        style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--color-border);height:400px;">
+                        <img src="https://images.unsplash.com/photo-1464082354059-27db6ce50048?w=900&q=80"
+                            alt="Algae-based biopolymers in architecture"
+                            style="width:100%;height:100%;object-fit:cover;opacity:0.8;">
+                    </div>
+                    <div style="display:flex;flex-direction:column;justify-content:center;">
+                        <span class="text-brass" style="font-size:0.8rem;letter-spacing:0.15em;">FEATURED · MARCH 15,
+                            2026</span>
+                        <h2 class="display-font" style="font-size:2.5rem;margin:1rem 0;">The Rise of Algae-Based
+                            Biopolymers in Structural Design</h2>
+                        <p class="text-muted">How new synthetic materials derived from marine algae are providing
+                            carbon-negative alternatives to traditional structural concrete — and why they're becoming
+                            mainstream faster than anyone predicted.</p>
+                        <a href="#" class="btn btn-primary" style="margin-top:2rem;align-self:flex-start;">Read
+                            Article</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Post Grid -->
+        <section style="background-color:var(--color-surface);">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="display-font">Recent Articles</h2>
+                </div>
+                <div class="grid-cols-3">
+                    <article class="card" data-aos="fade-up" data-aos-delay="100"
+                        style="align-items:flex-start;text-align:left;">
+                        <div
+                            style="width:100%;height:180px;border-radius:var(--radius-df);overflow:hidden;margin-bottom:1rem;">
+                            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=600"
+                                alt="Passive cooling architecture"
+                                style="width:100%;height:100%;object-fit:cover;opacity:0.8;">
+                        </div>
+                        <span class="text-brass" style="font-size:0.75rem;letter-spacing:0.1em;">FEB 28, 2026 ·
+                            ENGINEERING</span>
+                        <h3 class="display-font" style="margin:0.75rem 0;">Passive Cooling in Tropical Estuaries</h3>
+                        <p class="text-muted" style="font-size:0.9rem;">A case study on using natural convection and
+                            water-surface cooling to bypass mechanical HVAC systems entirely.</p>
+                        <a href="#" class="text-green" style="margin-top:1.5rem;font-weight:500;font-size:0.9rem;">Read
+                            More →</a>
+                    </article>
+                    <article class="card" data-aos="fade-up" data-aos-delay="200"
+                        style="align-items:flex-start;text-align:left;">
+                        <div
+                            style="width:100%;height:180px;border-radius:var(--radius-df);overflow:hidden;margin-bottom:1rem;">
+                            <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?auto=format&fit=crop&q=80&w=600"
+                                alt="LEED certification process"
+                                style="width:100%;height:100%;object-fit:cover;opacity:0.8;">
+                        </div>
+                        <span class="text-brass" style="font-size:0.75rem;letter-spacing:0.1em;">FEB 10, 2026 ·
+                            CERTIFICATION</span>
+                        <h3 class="display-font" style="margin:0.75rem 0;">Demystifying LEED Platinum in 2026</h3>
+                        <p class="text-muted" style="font-size:0.9rem;">What the updated LEED v5 scoring framework means
+                            for new builds and to approach documentation from day one.</p>
+                        <a href="#" class="text-green" style="margin-top:1.5rem;font-weight:500;font-size:0.9rem;">Read
+                            More →</a>
+                    </article>
+                    <article class="card" data-aos="fade-up" data-aos-delay="300"
+                        style="align-items:flex-start;text-align:left;">
+                        <div
+                            style="width:100%;height:180px;border-radius:var(--radius-df);overflow:hidden;margin-bottom:1rem;">
+                            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=600"
+                                alt="Urban green walls" style="width:100%;height:100%;object-fit:cover;opacity:0.8;">
+                        </div>
+                        <span class="text-brass" style="font-size:0.75rem;letter-spacing:0.1em;">JAN 22, 2026 ·
+                            URBANISM</span>
+                        <h3 class="display-font" style="margin:0.75rem 0;">Why Green Walls Are a Structural
+                            Decision</h3>
+                        <p class="text-muted" style="font-size:0.9rem;">Living walls are no longer just aesthetic —
+                            they're load-bearing, thermal, and acoustic performance assets.</p>
+                        <a href="#" class="text-green" style="margin-top:1.5rem;font-weight:500;font-size:0.9rem;">Read
+                            More →</a>
+                    </article>
+                    <article class="card" data-aos="fade-up" data-aos-delay="100"
+                        style="align-items:flex-start;text-align:left;">
+                        <div
+                            style="width:100%;height:180px;border-radius:var(--radius-df);overflow:hidden;margin-bottom:1rem;">
+                            <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&q=80&w=600"
+                                alt="Carbon negative concrete"
+                                style="width:100%;height:100%;object-fit:cover;opacity:0.8;">
+                        </div>
+                        <span class="text-brass" style="font-size:0.75rem;letter-spacing:0.1em;">JAN 05, 2026 ·
+                            MATERIALS</span>
+                        <h3 class="display-font" style="margin:0.75rem 0;">Carbon-Negative Concrete: Myth or Reality?
+                        </h3>
+                        <p class="text-muted" style="font-size:0.9rem;">We test three emerging alternatives and
+                            measure their embodied carbon against traditional Portland cement.</p>
+                        <a href="#" class="text-green" style="margin-top:1.5rem;font-weight:500;font-size:0.9rem;">Read
+                            More →</a>
+                    </article>
+                    <article class="card" data-aos="fade-up" data-aos-delay="200"
+                        style="align-items:flex-start;text-align:left;">
+                        <div
+                            style="width:100%;height:180px;border-radius:var(--radius-df);overflow:hidden;margin-bottom:1rem;">
+                            <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=600"
+                                alt="Solar integration in buildings"
+                                style="width:100%;height:100%;object-fit:cover;opacity:0.8;">
+                        </div>
+                        <span class="text-brass" style="font-size:0.75rem;letter-spacing:0.1em;">DEC 18, 2025 ·
+                            ENERGY</span>
+                        <h3 class="display-font" style="margin:0.75rem 0;">Integrated BIPV: When the Building Is the
+                            Solar Panel</h3>
+                        <p class="text-muted" style="font-size:0.9rem;">Building-integrated photovoltaics are reshaping
+                            facade design — and the economics are finally up with the vision.</p>
+                        <a href="#" class="text-green" style="margin-top:1.5rem;font-weight:500;font-size:0.9rem;">Read
+                            More →</a>
+                    </article>
+                    <article class="card" data-aos="fade-up" data-aos-delay="300"
+                        style="align-items:flex-start;text-align:left;">
+                        <div
+                            style="width:100%;height:180px;border-radius:var(--radius-df);overflow:hidden;margin-bottom:1rem;">
+                            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=600"
+                                alt="Circular economy in architecture"
+                                style="width:100%;height:100%;object-fit:cover;opacity:0.8;">
+                        </div>
+                        <span class="text-brass" style="font-size:0.75rem;letter-spacing:0.1em;">DEC 02, 2025 ·
+                            STRATEGY</span>
+                        <h3 class="display-font" style="margin:0.75rem 0;">The Circular Economy Case for Adaptive Reuse
+                        </h3>
+                        <p class="text-muted" style="font-size:0.9rem;">Demolition generates 30% of all global waste.
+                            Adaptive reuse is not just sustainable — it's economically superior.</p>
+                        <a href="#" class="text-green" style="margin-top:1.5rem;font-weight:500;font-size:0.9rem;">Read
+                            More →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" data-aos="zoom-out">
+            <div class="cta-section" style="padding:5rem 2rem;">
+                <h2 class="display-font" style="font-size:3rem;">Ready to build sustainably?</h2>
+                <p style="margin:1.5rem 0 2.5rem;">Join the firms setting the standard for responsible architecture.</p>
+                <a href="contact.html" class="btn btn-brass">Request a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid-5">
+
+            <!-- Column 1: Brand + Social -->
+            <div class="footer-brand">
+                <a href="index.html" style="text-decoration:none;line-height:0;">
+                    <img src="../assets/images/logo.svg" alt="Arkigreen Logo"
+                        style="height: 35px; width: auto; display: block;">
+                </a>
+                <p class="tagline">Pioneering carbon-neutral luxury architecture through innovative material science and
+                    bioclimatic design principles.</p>
+                <div class="social-links" style="margin-top:1.5rem;">
+                    <a href="#" aria-label="Instagram" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter / X" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor"
+                                stroke="none" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Project Portal -->
+            <div class="footer-column">
+                <h4>Project Portal</h4>
+                <ul class="footer-links">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="dashboard.html">Client Portal</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li style="color:var(--color-text-muted);font-size:0.9rem;">📍 42 Eco Avenue, Stockholm</li>
+                    <li><a href="mailto:projects@arkigreen.com">projects@arkigreen.com</a></li>
+                    <li><a href="tel:+4685551234">+46 (8) 555 123 44</a></li>
+                </ul>
+                <p style="margin-top:1.5rem;font-size:0.75rem;color:var(--color-green);letter-spacing:0.1em;">
+                    ✦ LEED PLATINUM CERTIFIED
+                </p>
+            </div>
+
+            <!-- Column 5: Newsletter -->
+            <div class="footer-column footer-newsletter-col">
+                <h4>Newsletter</h4>
+                <p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1.25rem;line-height:1.6;">
+                    Green building insights and project updates straight to your inbox.
+                </p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" class="newsletter-input"
+                        aria-label="Email for newsletter">
+                    <button class="btn btn-brass" style="width:100%;">Subscribe</button>
+                </div>
+                <p style="font-size:0.72rem;color:var(--color-text-muted);margin-top:0.75rem;">
+                    No spam. Unsubscribe anytime.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Arkigreen Architecture. All rights reserved.</p>
+            <p>Designed with Integrity</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

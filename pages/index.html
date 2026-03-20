@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkigreen | Premium Sustainable Architecture</title>
+    <meta name="description"
+        content="Arkigreen is a leading sustainable architecture firm specializing in luxury green building and eco-friendly design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- FIX 2: GSAP loaded in <head> so hero animation script is safe -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+
+<body>
+
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <aside class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" style="text-decoration:none;line-height:0;">
+                <img src="../assets/images/logo.svg" alt="Arkigreen Logo"
+                    style="height: 40px; width: auto; display: block;">
+            </a>
+            <button class="theme-btn" id="close-drawer" aria-label="Close menu" style="padding:0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="home2.html" class="nav-link">Home 2</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="dashboard.html" class="nav-link">Client Portal</a>
+            <button class="theme-btn" id="theme-toggle-mobile" aria-label="Toggle theme">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                        d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2m-1.42-7.78l-1.42 1.42M5.64 18.36l-1.42 1.42" />
+                </svg>
+            </button>
+        </nav>
+        <a href="login.html" class="btn btn-primary">Login</a>
+    </aside>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" style="text-decoration:none;line-height:0;">
+                <img src="../assets/images/logo.svg" alt="Arkigreen Logo"
+                    style="height: 40px; width: auto; display: block;">
+            </a>
+            <!-- FIX 1: Client Portal added to desktop nav -->
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="home2.html" class="nav-link">Home 2</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="dashboard.html" class="nav-link">Client Portal</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2m-1.42-7.78l-1.42 1.42M5.64 18.36l-1.42 1.42" />
+                    </svg>
+                </button>
+                <a href="login.html" class="btn btn-outline" id="login-btn">Login</a>
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+
+            <!-- Image + dark overlay -->
+            <div style="position:absolute;inset:0;z-index:0;">
+                <img src="https://images.unsplash.com/photo-1464082354059-27db6ce50048?auto=format&fit=crop&w=1920&q=80"
+                    alt="" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.45);">
+                <div style="position:absolute;inset:0;background:rgba(5,10,8,0.65);"></div>
+            </div>
+
+            <!-- Text content -->
+            <div class="container" style="position:relative;z-index:1;">
+                <div class="hero-content">
+                    <h1 class="gsap-hero-title">Architecting a <span class="text-green">Sustainable</span> Future</h1>
+                    <p class="text-muted gsap-hero-sub" style="max-width:600px;text-align:center;margin:0 auto;"></p>
+                    Arkigreen combines luxury minimalism
+                    with LEED-standard engineering to create environments that breathe, endure, and inspire.</p>
+                    <div class="flex-center gsap-hero-btn" style="justify-content:center;gap:1rem;">
+                        <a href="services.html" class="btn btn-primary">Our Projects</a>
+                        <a href="contact.html" class="btn btn-outline">Consultation</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="display-font">Our Core Expertise</h2>
+                    <p class="text-muted">Specialized architectural services focused on environmental performance
+                        and
+                        structural elegance.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-green" style="font-size:2rem;margin-bottom:1rem;">◈</div>
+                        <h3 class="display-font">Bioclimatic Design</h3>
+                        <p class="text-muted">Optimizing natural light, ventilation, and thermal mass to minimize
+                            energy
+                            consumption.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-green" style="font-size:2rem;margin-bottom:1rem;">◎</div>
+                        <h3 class="display-font">Zero Carbon Retrofitting</h3>
+                        <p class="text-muted">Transforming legacy structures into energy-efficient, sustainable
+                            modern
+                            estates.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-green" style="font-size:2rem;margin-bottom:1rem;">⬢</div>
+                        <h3 class="display-font">Vertical Urbanism</h3>
+                        <p class="text-muted">Innovative green walls and high-density sustainable living solutions
+                            for
+                            city centers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" style="background-color:var(--color-surface);">
+            <div class="container">
+                <div class="features-grid">
+                    <div data-aos="fade-right">
+                        <div
+                            style="width:100%;height:500px;background-color:var(--color-primary);border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+                                alt="Sustainable Architecture by Arkigreen"
+                                style="width:100%;height:100%;object-fit:cover;opacity:0.85;">
+                        </div>
+                    </div>
+                    <div data-aos="fade-left">
+                        <h2 class="display-font">Design that Respects the <span class="text-brass">Earth</span></h2>
+                        <p class="text-muted" style="margin:2rem 0;">At Arkigreen, we believe that true luxury is
+                            found
+                            in harmony with nature. Our approach integrates state-of-the-art construction technology
+                            with ancient wisdom of site orientation and material selection.</p>
+                        <div class="feature-item">
+                            <div class="feature-icon">✔</div>
+                            <div>
+                                <h4>LEED Platinum Standards</h4>
+                                <p class="text-muted">Every project aims for the highest environmental
+                                    certification.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✔</div>
+                            <div>
+                                <h4>Resource Circularity</h4>
+                                <p class="text-muted">We prioritize recycled and locally sourced carbon-negative
+                                    materials.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="metrics">
+            <div class="container">
+                <div class="section-header" data-aos="zoom-in">
+                    <h2 class="display-font">Sustainability Metrics</h2>
+                    <p class="text-muted">Our impact in numbers across 50+ international projects.</p>
+                </div>
+                <div class="grid-cols-3" style="text-align:center;">
+                    <div data-aos="fade-up">
+                        <h2 class="text-brass" style="font-size:3.5rem;">40%</h2>
+                        <p class="text-muted">Average Energy Reduction</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="text-brass" style="font-size:3.5rem;">12k</h2>
+                        <p class="text-muted">Tons of CO2 Offset</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <h2 class="text-brass" style="font-size:3.5rem;">100%</h2>
+                        <p class="text-muted">Renewable Energy Powered</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="display-font">Client Perspectives</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="testimonial-card" data-aos="fade-up">
+                        <p class="testimonial-text">"Arkigreen didn't just build our headquarters; they built a
+                            statement of our corporate values. The energy savings surpassed all projections."
+                        </p>
+                        <cite>— Marcus Vane, CEO of Zenith Green</cite>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <p class="testimonial-text">"The integration of natural elements into the living spaces is
+                            breathtaking. It's rare to find architects who understand both soul and science."</p>
+                        <cite>— Elena Rossi, Residential Developer</cite>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <p class="testimonial-text">"From concept to completion, the Arkigreen team was meticulous,
+                            transparent, and genuinely passionate about sustainable outcomes."</p>
+                        <cite>— David Osei, Urban Planner</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" data-aos="zoom-out">
+            <div class="cta-section" style="padding:5rem 2rem;">
+                <h2 class="display-font" style="font-size:3rem;">Ready to build for the future?</h2>
+                <p style="margin:1.5rem 0 2.5rem;">Join the movement towards responsible, luxury architecture.</p>
+                <a href="contact.html" class="btn btn-brass">Request a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid-5">
+
+            <!-- Column 1: Brand + Social -->
+            <div class="footer-brand">
+                <a href="index.html" style="text-decoration:none;line-height:0;">
+                    <img src="../assets/images/logo.svg" alt="Arkigreen Logo"
+                        style="height: 35px; width: auto; display: block;">
+                </a>
+                <p class="tagline">Pioneering carbon-neutral luxury architecture through innovative material science and
+                    bioclimatic design principles.</p>
+                <div class="social-links" style="margin-top:1.5rem;">
+                    <a href="#" aria-label="Instagram" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter / X" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor"
+                                stroke="none" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Project Portal -->
+            <div class="footer-column">
+                <h4>Project Portal</h4>
+                <ul class="footer-links">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="dashboard.html">Client Portal</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li style="color:var(--color-text-muted);font-size:0.9rem;">📍 42 Eco Avenue, Stockholm</li>
+                    <li><a href="mailto:projects@arkigreen.com">projects@arkigreen.com</a></li>
+                    <li><a href="tel:+4685551234">+46 (8) 555 123 44</a></li>
+                </ul>
+                <p style="margin-top:1.5rem;font-size:0.75rem;color:var(--color-green);letter-spacing:0.1em;">
+                    ✦ LEED PLATINUM CERTIFIED
+                </p>
+            </div>
+
+            <!-- Column 5: Newsletter -->
+            <div class="footer-column footer-newsletter-col">
+                <h4>Newsletter</h4>
+                <p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1.25rem;line-height:1.6;">
+                    Green building insights and project updates straight to your inbox.
+                </p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" class="newsletter-input"
+                        aria-label="Email for newsletter">
+                    <button class="btn btn-brass" style="width:100%;">Subscribe</button>
+                </div>
+                <p style="font-size:0.72rem;color:var(--color-text-muted);margin-top:0.75rem;">
+                    No spam. Unsubscribe anytime.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Arkigreen Architecture. All rights reserved.</p>
+            <p>Designed with Integrity</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            if (typeof gsap !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1.2 } });
+                tl.from('.gsap-hero-title', { y: 100, opacity: 0 })
+                    .from('.gsap-hero-sub', { y: 20, opacity: 0 }, '-=0.8')
+                    .from('.gsap-hero-btn', { y: 20, opacity: 0 }, '-=0.8');
+            }
+        });
+    </script>
+</body>
+
+</html>

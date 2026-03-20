@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 90 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- Leaf outline -->
+    <path d="M40 5 C65 25, 65 65, 40 85 C15 65, 15 25, 40 5 Z" 
+          stroke="#3b6b52" stroke-width="2" fill="none"/>
+    <!-- Central vein -->
+    <line x1="40" y1="15" x2="40" y2="75" stroke="#3b6b52" stroke-width="1.5"/>
+    <!-- Architectural lines -->
+    <line x1="28" y1="35" x2="52" y2="35" stroke="#3b6b52" stroke-width="1.5"/>
+    <line x1="30" y1="50" x2="50" y2="50" stroke="#3b6b52" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Arkigreen Architecture</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+
+<body>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <aside class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" style="text-decoration:none;line-height:0;">
+                <img src="../assets/images/logo.svg" alt="Arkigreen Logo" style="height: 40px; width: auto; display: block;">
+            </a>
+            <button class="theme-btn" id="close-drawer" aria-label="Close menu" style="padding:0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="home2.html" class="nav-link">Home 2</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+            <a href="dashboard.html" class="nav-link">Client Portal</a>
+            <button class="theme-btn" id="theme-toggle-mobile" aria-label="Toggle theme">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                        d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2m-1.42-7.78l-1.42 1.42M5.64 18.36l-1.42 1.42" />
+                </svg>
+            </button>
+        </nav>
+        <a href="login.html" class="btn btn-primary">Login</a>
+    </aside>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" style="text-decoration:none;line-height:0;">
+                <img src="../assets/images/logo.svg" alt="Arkigreen Logo" style="height: 40px; width: auto; display: block;">
+            </a>
+            <!-- FIX 1: Client Portal added to desktop nav -->
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home2.html" class="nav-link">Home 2</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="dashboard.html" class="nav-link">Client Portal</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2m-1.42-7.78l-1.42 1.42M5.64 18.36l-1.42 1.42" />
+                    </svg>
+                </button>
+                <a href="login.html" class="btn btn-outline" id="login-btn">Login</a>
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h1 class="display-font">Get in Touch</h1>
+                    <p class="text-muted">Discuss your next sustainable masterpiece with our lead consultants.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info & Map -->
+                    <div class="contact-info" data-aos="fade-right">
+                        <div class="contact-item">
+                            <div class="text-green">📍</div>
+                            <div>
+                                <h4>International Studio</h4>
+                                <p class="text-muted">42 Eco Avenue, Suite 100<br>Stockholm, Sweden 112 51</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="text-green">✉</div>
+                            <div>
+                                <h4>Email Enquiries</h4>
+                                <p class="text-muted">projects@arkigreen.com<br>press@arkigreen.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="text-green">📞</div>
+                            <div>
+                                <h4>Global Phone</h4>
+                                <p class="text-muted">+46 (8) 555 123 44</p>
+                            </div>
+                        </div>
+
+                        <div id="map"></div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container" data-aos="fade-left">
+                        <form id="contact-form" action="https://formspree.io/f/placeholder" method="POST"
+                            class="auth-card" style="max-width: 100%; text-align: left;">
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" name="name" class="form-input" placeholder="Your name"
+                                    required>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="subject">Project Type</label>
+                                <select id="subject" name="subject" class="form-input" style="appearance: none;">
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                    <option value="industrial">Industrial</option>
+                                    <option value="consultancy">Consultancy</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 2rem;">
+                                <label for="message">Project Vision</label>
+                                <textarea id="message" name="message" class="form-input" rows="5"
+                                    placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+                            <div id="form-status" style="margin-top: 1rem; text-align: center; font-size: 0.9rem;">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid-5">
+
+            <!-- Column 1: Brand + Social -->
+            <div class="footer-brand">
+                <a href="index.html" style="text-decoration:none;line-height:0;">
+                    <img src="../assets/images/logo.svg" alt="Arkigreen Logo" style="height: 35px; width: auto; display: block;">
+                </a>
+                <p class="tagline">Pioneering carbon-neutral luxury architecture through innovative material science and
+                    bioclimatic design principles.</p>
+                <div class="social-links" style="margin-top:1.5rem;">
+                    <a href="#" aria-label="Instagram" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter / X" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor"
+                                stroke="none" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Project Portal -->
+            <div class="footer-column">
+                <h4>Project Portal</h4>
+                <ul class="footer-links">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="dashboard.html">Client Portal</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li style="color:var(--color-text-muted);font-size:0.9rem;">📍 42 Eco Avenue, Stockholm</li>
+                    <li><a href="mailto:projects@arkigreen.com">projects@arkigreen.com</a></li>
+                    <li><a href="tel:+4685551234">+46 (8) 555 123 44</a></li>
+                </ul>
+                <p style="margin-top:1.5rem;font-size:0.75rem;color:var(--color-green);letter-spacing:0.1em;">
+                    ✦ LEED PLATINUM CERTIFIED
+                </p>
+            </div>
+
+            <!-- Column 5: Newsletter -->
+            <div class="footer-column footer-newsletter-col">
+                <h4>Newsletter</h4>
+                <p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1.25rem;line-height:1.6;">
+                    Green building insights and project updates straight to your inbox.
+                </p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" class="newsletter-input"
+                        aria-label="Email for newsletter">
+                    <button class="btn btn-brass" style="width:100%;">Subscribe</button>
+                </div>
+                <p style="font-size:0.72rem;color:var(--color-text-muted);margin-top:0.75rem;">
+                    No spam. Unsubscribe anytime.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Arkigreen Architecture. All rights reserved.</p>
+            <p>Designed with Integrity</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        // Leaflet Map Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            const map = L.map('map').setView([59.3293, 18.0686], 13); // Stockholm center
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            L.marker([59.3293, 18.0686]).addTo(map)
+                .bindPopup('Arkigreen Architecture Studio')
+                .openPopup();
+
+            // Fix Leaflet sizing issue in hidden/animated containers
+            setTimeout(() => { map.invalidateSize(); }, 500);
+        });
+
+        // Form Validation & Feedback
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            status.innerHTML = "Sending...";
+            status.style.color = "var(--color-brass)";
+
+            const data = new FormData(form);
+            // Simulate Formspree (since placeholder URL won't work)
+            setTimeout(() => {
+                status.innerHTML = "✅ Thank you! Message sent successfully.";
+                status.style.color = "var(--color-green)";
+                form.reset();
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

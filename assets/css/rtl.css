@@ -1,0 +1,44 @@
+/* 
+    ARKIGREEN - RTL Support
+    Applied to [dir="rtl"] body
+*/
+
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .nav-container,
+[dir="rtl"] .footer-grid,
+[dir="rtl"] .contact-grid,
+[dir="rtl"] .features-grid,
+[dir="rtl"] .services-grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .logo {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+[dir="rtl"] .nav-links {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+[dir="rtl"] .sidebar {
+    border-right: none;
+    border-left: 1px solid var(--color-border);
+}
+
+[dir="rtl"] .sidebar-link {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .btn {
+    text-align: center;
+}
+
+[dir="rtl"] .contact-item {
+    flex-direction: row-reverse;
+    text-align: right;
+}
