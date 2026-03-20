@@ -1,0 +1,248 @@
+/* 
+    ARKIGREEN - Dashboard Specific Styles
+    Scoped to dashboard.html only
+*/
+
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background-color: var(--color-surface);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    z-index: 1001;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        height: 100vh;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar.collapsed {
+        left: -80px;
+    }
+}
+
+.sidebar-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 24px 0;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: var(--color-text-muted);
+    gap: 16px;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    color: var(--color-text);
+    background-color: rgba(59, 107, 82, 0.1);
+    border-left: 3px solid var(--color-green);
+}
+
+.sidebar.collapsed .sidebar-text {
+    display: none;
+}
+
+/* Main Content Area */
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.top-bar {
+    height: 80px;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.content-body {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+/* Module Cards */
+.module-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.col-12 {
+    grid-column: span 12;
+}
+
+.col-8 {
+    grid-column: span 8;
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+@media (max-width: 1280px) {
+
+    .col-8,
+    .col-4,
+    .col-6 {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .col-8,
+    .col-4,
+    .col-6 {
+        grid-column: span 12;
+    }
+
+    .content-body {
+        padding: 20px;
+    }
+
+    .top-bar {
+        padding: 0 20px;
+    }
+}
+
+/* Module 1: Overview Styles */
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-in-progress {
+    background: rgba(59, 107, 82, 0.2);
+    color: #7cfc00;
+}
+
+.status-on-hold {
+    background: rgba(184, 151, 90, 0.2);
+    color: var(--color-brass);
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--color-green);
+    transition: width 0.5s ease;
+}
+
+/* Module 3: Materials */
+.material-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.material-card {
+    background: var(--color-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-df);
+    padding: 12px;
+    text-align: left;
+}
+
+.material-swatch {
+    height: 100px;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    object-fit: cover;
+}
+
+/* Module 7: Messaging */
+.chat-container {
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.msg {
+    max-width: 80%;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.msg.left {
+    align-self: flex-start;
+    background: var(--color-primary);
+}
+
+.msg.right {
+    align-self: flex-end;
+    background: var(--color-green);
+    color: white;
+}
+
+/* FullCalendar Customization */
+.fc {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--color-text);
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border: 1px solid var(--color-border);
+}
