@@ -23,7 +23,8 @@
     <aside class="mobile-drawer" id="mobile-drawer">
         <div class="drawer-header">
             <a href="index.html" style="text-decoration:none;line-height:0;">
-                <img src="../assets/images/logo.svg" alt="Arkigreen Logo" style="height: 40px; width: auto; display: block;">
+                <img src="../assets/images/logo.svg" alt="Arkigreen Logo"
+                    style="height: 40px; width: auto; display: block;">
             </a>
             <button class="theme-btn" id="close-drawer" aria-label="Close menu" style="padding:0;">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -53,7 +54,8 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" style="text-decoration:none;line-height:0;">
-                <img src="../assets/images/logo.svg" alt="Arkigreen Logo" style="height: 40px; width: auto; display: block;">
+                <img src="../assets/images/logo.svg" alt="Arkigreen Logo"
+                    style="height: 40px; width: auto; display: block;">
             </a>
             <!-- FIX 1: Client Portal added to desktop nav -->
             <nav class="nav-links">
@@ -82,15 +84,21 @@
     </header>
 
     <main>
-        <section style="padding:6rem 0 3rem;background-color:var(--color-surface);">
-            <div class="container">
+        <section
+            style="position:relative;min-height:420px;display:flex;align-items:center;padding:6rem 0 3rem;overflow:hidden;">
+            <div style="position:absolute;inset:0;z-index:0;">
+                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80" alt=""
+                    style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.4);">
+                <div style="position:absolute;inset:0;background:rgba(5,10,8,0.72);"></div>
+            </div>
+            <div class="container" style="position:relative;z-index:1;">
                 <div class="section-header" data-aos="fade-up">
                     <p class="text-brass" style="font-size:0.85rem;letter-spacing:0.2em;margin-bottom:1rem;">WHAT WE DO
                     </p>
-                    <h1 class="display-font" style="font-size:4rem;">Our Practice Areas</h1>
-                    <p class="text-muted" style="max-width:650px;margin:1.5rem auto 0;">Comprehensive sustainable
-                        solutions for residential, commercial, and industrial sectors — each project a benchmark in
-                        environmental performance.</p>
+                    <h1 class="display-font" style="font-size:4rem;color:#ffffff;">Our Practice Areas</h1>
+                    <p style="max-width:650px;margin:1.5rem auto 0;color:rgba(255,255,255,0.75);">Comprehensive
+                        sustainable solutions for residential, commercial, and industrial sectors — each project a
+                        benchmark in environmental performance.</p>
                 </div>
             </div>
         </section>
@@ -219,10 +227,18 @@
         </section>
 
         <section class="container" data-aos="zoom-out">
-            <div class="cta-section" style="padding:5rem 2rem;">
-                <h2 class="display-font" style="font-size:3rem;">Ready to start your project?</h2>
-                <p style="margin:1.5rem 0 2.5rem;">Tell us your vision. We'll tell you how to make it sustainable.</p>
-                <a href="contact.html" class="btn btn-brass">Request a Consultation</a>
+            <div class="cta-section" style="padding:5rem 2rem;position:relative;overflow:hidden;">
+                <div style="position:absolute;inset:0;z-index:0;">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80" alt=""
+                        style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.35);">
+                    <div style="position:absolute;inset:0;background:rgba(30,60,40,0.6);"></div>
+                </div>
+                <div style="position:relative;z-index:1;">
+                    <h2 class="display-font" style="font-size:3rem;color:#ffffff;">Ready to start your project?</h2>
+                    <p style="margin:1.5rem 0 2.5rem;color:rgba(255,255,255,0.8);">Tell us your vision. We'll tell you
+                        how to make it sustainable.</p>
+                    <a href="contact.html" class="btn btn-brass">Request a Consultation</a>
+                </div>
             </div>
         </section>
     </main>
@@ -233,7 +249,8 @@
             <!-- Column 1: Brand + Social -->
             <div class="footer-brand">
                 <a href="index.html" style="text-decoration:none;line-height:0;">
-                    <img src="../assets/images/logo.svg" alt="Arkigreen Logo" style="height: 35px; width: auto; display: block;">
+                    <img src="../assets/images/logo.svg" alt="Arkigreen Logo"
+                        style="height: 35px; width: auto; display: block;">
                 </a>
                 <p class="tagline">Pioneering carbon-neutral luxury architecture through innovative material science and
                     bioclimatic design principles.</p>
