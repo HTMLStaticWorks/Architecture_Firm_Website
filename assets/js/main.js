@@ -7,7 +7,29 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initMobileMenu();
     initAnimations();
+    initScrollTop();
 });
+
+
+function initScrollTop() {
+    const scrollTopBtn = document.getElementById('scroll-to-top');
+    if (!scrollTopBtn) return;
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY || document.documentElement.scrollTop;
+        const threshold = document.documentElement.scrollHeight * 0.3;
+
+        if (scrolled > threshold) {
+            scrollTopBtn.classList.add('show');
+        } else {
+            scrollTopBtn.classList.remove('show');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
 /* FIX 3 — Theme Toggle works on BOTH desktop + mobile drawer */
 function initTheme() {
@@ -18,7 +40,7 @@ function initTheme() {
     }
 
     const desktopToggle = document.getElementById('theme-toggle');
-    const mobileToggle  = document.getElementById('theme-toggle-mobile');
+    const mobileToggle = document.getElementById('theme-toggle-mobile');
 
     function toggleTheme() {
         body.classList.toggle('light-mode');
@@ -26,15 +48,15 @@ function initTheme() {
     }
 
     if (desktopToggle) desktopToggle.addEventListener('click', toggleTheme);
-    if (mobileToggle)  mobileToggle.addEventListener('click', toggleTheme);
+    if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
 }
 
 /* Mobile Drawer */
 function initMobileMenu() {
-    const hamburger    = document.getElementById('hamburger');
+    const hamburger = document.getElementById('hamburger');
     const mobileDrawer = document.getElementById('mobile-drawer');
-    const closeDrawer  = document.getElementById('close-drawer');
-    const overlay      = document.getElementById('drawer-overlay');
+    const closeDrawer = document.getElementById('close-drawer');
+    const overlay = document.getElementById('drawer-overlay');
 
     if (!hamburger || !mobileDrawer) return;
 
@@ -51,7 +73,7 @@ function initMobileMenu() {
     }
 
     if (closeDrawer) closeDrawer.addEventListener('click', closeMenu);
-    if (overlay)     overlay.addEventListener('click', closeMenu);
+    if (overlay) overlay.addEventListener('click', closeMenu);
 }
 
 /* GSAP + AOS — respects reduced motion */
@@ -72,3 +94,4 @@ function initAnimations() {
         });
     }
 }
+
