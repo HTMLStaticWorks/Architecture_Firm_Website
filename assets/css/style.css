@@ -1234,3 +1234,26 @@ body:not(.light-mode) .navbar .logo-img {
         grid-template-columns: 1fr !important;
     }
 }
+
+@media (max-width: 768px) {
+    .how-we-work-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .how-we-work-grid>div:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .how-we-work-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .how-we-work-grid>div:last-child {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+}
