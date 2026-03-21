@@ -131,14 +131,60 @@
     <main>
         <!-- Hero Split Section -->
         <section class="hero-split">
-            <div class="hero-split-text" style="text-align:center;">
+            <div class="hero-split-text"
+                style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+
+                <p
+                    style="font-size:0.75rem;letter-spacing:0.3em;color:var(--color-brass);margin-bottom:1.5rem;text-transform:uppercase;">
+                    Sustainable · Luxury · Architecture
+                </p>
+
                 <h1 class="gsap-hero-title">Elegance in <br><span class="text-brass">Efficiency</span></h1>
-                <p class="text-muted gsap-hero-sub" style="margin: 2rem 0;">We redefine the skyline with carbon-neutral
-                    materials and bioclimatic intelligence. Our home is the future.</p>
-                <div class="flex-center gsap-hero-btn" style="justify-content: center; gap: 1rem;">
+
+                <p class="gsap-hero-sub"
+                    style="margin:1.5rem 0;color:var(--color-text-muted);max-width:420px;line-height:1.8;">
+                    We redefine the skyline with carbon-neutral materials and bioclimatic intelligence. Our home is the
+                    future.
+                </p>
+
+                <!-- Feature pills -->
+                <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;margin-bottom:2rem;">
+                    <span
+                        style="padding:6px 16px;border:1px solid var(--color-border);border-radius:20px;font-size:0.78rem;color:var(--color-text-muted);">✦
+                        LEED Platinum</span>
+                    <span
+                        style="padding:6px 16px;border:1px solid var(--color-border);border-radius:20px;font-size:0.78rem;color:var(--color-text-muted);">✦
+                        Zero Carbon</span>
+                    <span
+                        style="padding:6px 16px;border:1px solid var(--color-border);border-radius:20px;font-size:0.78rem;color:var(--color-text-muted);">✦
+                        50+ Projects</span>
+                </div>
+
+                <div class="flex-center gsap-hero-btn" style="justify-content:center;gap:1rem;margin-bottom:3rem;">
                     <a href="contact.html" class="btn btn-primary">Start Design</a>
                     <a href="services.html" class="btn btn-outline">Explore More</a>
                 </div>
+
+                <!-- Bottom stats -->
+                <div
+                    style="display:flex;gap:2.5rem;justify-content:center;padding-top:2rem;border-top:1px solid var(--color-border);width:100%;">
+                    <div>
+                        <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--color-brass);">8+
+                        </h4>
+                        <p style="font-size:0.7rem;letter-spacing:0.1em;color:var(--color-text-muted);">COUNTRIES</p>
+                    </div>
+                    <div>
+                        <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--color-brass);">
+                            50+</h4>
+                        <p style="font-size:0.7rem;letter-spacing:0.1em;color:var(--color-text-muted);">PROJECTS</p>
+                    </div>
+                    <div>
+                        <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--color-brass);">
+                            100%</h4>
+                        <p style="font-size:0.7rem;letter-spacing:0.1em;color:var(--color-text-muted);">RENEWABLE</p>
+                    </div>
+                </div>
+
             </div>
             <div class="hero-split-image">
                 <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80"
@@ -150,7 +196,8 @@
             <div class="container">
                 <div class="features-grid">
                     <div class="about-content" data-aos="fade-right">
-                        <h2 class="display-font">The Arkigreen <span class="text-green">Manifesto</span></h2>
+                        <h2 class="display-font" style="text-align:center;">The Arkigreen <span
+                                class="text-green">Manifesto</span></h2>
                         <p class="text-muted" style="margin: 2rem 0;">Sustainability is not a feature; it is the
                             structural soul of every project we undertake. We don't just build homes; we foster
                             ecosystems.</p>
@@ -160,6 +207,24 @@
                             <div>
                                 <h4>Material Honesty</h4>
                                 <p class="text-muted">Direct sourcing of stone, timber, and recycled composites.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">◎</div>
+                            <div>
+                                <h4>Zero Carbon Commitment</h4>
+                                <p class="text-muted">Every project is designed to achieve net-zero carbon from day one.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">⬡</div>
+                            <div>
+                                <h4>Client Transparency</h4>
+                                <p class="text-muted">Real-time access to every blueprint, milestone and material
+                                    decision.</p>
                             </div>
                         </div>
                     </div>
@@ -222,12 +287,28 @@
         <!-- CTA Section -->
         <section class="container" data-aos="zoom-out">
             <div class="cta-section"
-                style="padding: 5rem 2rem; background-color: var(--color-primary); border: 1px solid var(--color-green);">
-                <h2 class="display-font" style="font-size: 3rem;">Define your <span class="text-green">Legacy</span>.
-                </h2>
-                <p style="margin: 1.5rem 0 2.5rem;color: var(--color-text-muted);">Partner with the world leaders in
-                    sustainable architecture.</p>
-                <a href="contact.html" class="btn btn-primary">Book Consultation</a>
+                style="padding:5rem 2rem;position:relative;overflow:hidden;border:1px solid var(--color-green);background-color:var(--color-primary);">
+
+                <!-- Background image -->
+                <div style="position:absolute;inset:0;z-index:0;">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80" alt=""
+                        style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.25);opacity:0.6;">
+                </div>
+
+                <!-- Content on top -->
+                <div style="position:relative;z-index:1;">
+                    <p
+                        style="font-size:0.8rem;letter-spacing:0.3em;color:var(--color-brass);margin-bottom:1rem;text-transform:uppercase;">
+                        Your Vision. Our Expertise.</p>
+                    <h2 class="display-font" style="font-size:3rem;color:#ffffff;">Define your <span
+                            class="text-green">Legacy</span>.</h2>
+                    <p
+                        style="margin:1.5rem 0 2.5rem;color:rgba(255,255,255,0.8);max-width:500px;margin-left:auto;margin-right:auto;">
+                        Partner with the world leaders in sustainable architecture and create spaces that endure for
+                        generations.</p>
+                    <a href="contact.html" class="btn btn-primary">Book Consultation</a>
+                </div>
+
             </div>
         </section>
     </main>

@@ -118,3 +118,21 @@ body.light-mode .hero .btn-outline:hover {
     border-color: #ffffff !important;
     background: rgba(255, 255, 255, 0.1) !important;
 }
+
+body.light-mode .footer-column h4,
+body.light-mode .footer-newsletter-col h4 {
+    color: #1a1f1c !important;
+    font-weight: 700 !important;
+    font-size: 1rem;
+}
+
+/* CTA section text always readable in light mode */
+body.light-mode .cta-section h2,
+body.light-mode .cta-section p,
+body.light-mode .cta-section span {
+    color: #ffffff !important;
+}
+
+body.light-mode .cta-section .text-green {
+    color: #5aad7f !important;
+}

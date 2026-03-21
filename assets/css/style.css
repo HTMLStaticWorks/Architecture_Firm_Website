@@ -743,8 +743,8 @@ section {
 /* --- CONTACT PAGE --- */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: calc(var(--base-unit) * 10);
+    grid-template-columns: 1.4fr 1fr;
+    gap: calc(var(--base-unit) * 6);
 }
 
 .contact-info {
@@ -837,9 +837,12 @@ section {
 }
 
 .footer-column h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 700;
     margin-bottom: calc(var(--base-unit) * 3);
     color: var(--color-brass);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .footer-links {
@@ -1065,27 +1068,6 @@ body:not(.light-mode) .navbar .logo-img {
     }
 }
 
-/* Services page card hover */
-.services-grid .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.services-grid .card:hover {
-    transform: translateY(-8px);
-    border-color: var(--color-green);
-    box-shadow: 0 20px 40px rgba(59, 107, 82, 0.2);
-}
-
-.services-grid .card:hover .text-green {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
-}
-
-.services-grid .card .text-green {
-    transition: transform 0.3s ease;
-    display: inline-block;
-}
-
 /* Scroll to Top Button */
 #scroll-to-top {
     position: fixed;
@@ -1119,4 +1101,78 @@ body:not(.light-mode) .navbar .logo-img {
     background: #4a8266;
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(59, 107, 82, 0.5);
+}
+
+.testimonial-card {
+    text-align: center;
+}
+
+.testimonial-card cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--color-brass);
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+/* Service Cards with Overlay Effect */
+.service-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    min-height: 280px;
+    cursor: pointer;
+    border: 1px solid var(--color-border);
+    transition: border-color 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--color-green);
+}
+
+/* Front face — icon + title only */
+.service-card-front {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-surface);
+    transition: opacity 0.3s ease;
+}
+
+/* Overlay — full content shown on hover */
+.service-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--color-green);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover .service-card-front {
+    opacity: 0;
+}
+
+.service-card:hover .service-card-overlay {
+    opacity: 1;
+}
+
+.service-card-overlay h3 {
+    color: white;
+}
+
+.service-card-overlay ul li {
+    color: rgba(255, 255, 255, 0.85);
 }

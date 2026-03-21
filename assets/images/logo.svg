@@ -1,1 +1,14 @@
-<svg width="460" height="110" viewBox="0 0 460 110" xmlns="http://www.w3.org/2000/svg">  <!-- Icon --> <g transform="translate(20,20)"> <!-- Geometric leaf outline --> <path d="M40 5 C65 25, 65 65, 40 85 C15 65, 15 25, 40 5 Z" stroke="#3b6b52" stroke-width="2" fill="none"/> <!-- Central vein --> <line x1="40" y1="15" x2="40" y2="75" stroke="#3b6b52" stroke-width="1.5"/> <!-- Architectural lines --> <line x1="28" y1="35" x2="52" y2="35" stroke="#3b6b52" stroke-width="1.5"/> <line x1="30" y1="50" x2="50" y2="50" stroke="#3b6b52" stroke-width="1.5"/> </g> <!-- Text --> <text x="110" y="68" font-family="Cormorant Garamond, Georgia, serif" font-size="44" fill="#3b6b52" letter-spacing="1"> Arki<tspan fill="#3b6b52">green</tspan> </text> </svg>
+<svg width="460" height="110" viewBox="0 0 460 110" xmlns="http://www.w3.org/2000/svg">
+    <!-- Icon -->
+    <g transform="translate(20,20)">
+        <!-- Geometric leaf outline -->
+        <path d="M40 5 C65 25, 65 65, 40 85 C15 65, 15 25, 40 5 Z" stroke="#4a9968" stroke-width="2" fill="none"/>
+        <!-- Central vein -->
+        <line x1="40" y1="15" x2="40" y2="75" stroke="#4a9968" stroke-width="1.5"/>
+        <!-- Architectural lines -->
+        <line x1="28" y1="35" x2="52" y2="35" stroke="#4a9968" stroke-width="1.5"/>
+        <line x1="30" y1="50" x2="50" y2="50" stroke="#4a9968" stroke-width="1.5"/>
+    </g>
+    <!-- Text -->
+    <text x="110" y="68" font-family="Cormorant Garamond, Georgia, serif" font-size="44" font-weight="600" fill="#4a9968" letter-spacing="1">Arki<tspan fill="#4a9968">green</tspan></text>
+</svg>
