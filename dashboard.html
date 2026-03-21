@@ -29,7 +29,7 @@
             "materials": [
                 { "name": "Recycled Slate Tile", "supplier": "StoneCraft UK", "status": "Approved", "image": "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?w=200" },
                 { "name": "Bismuth Glass Paneling", "supplier": "ClearPath Tech", "status": "Pending", "image": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=200" },
-                { "name": "Carbon-Negative Concrete", "supplier": "TerraForm", "status": "Revision Needed", "image": "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?w=200" }
+                { "name": "Carbon-Negative Concrete", "supplier": "TerraForm", "status": "Revision", "image": "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?w=200" }
             ],
             "timelineEvents": [
                 { "title": "Groundbreaking", "start": "2026-01-15", "className": "event-milestone" },
@@ -161,21 +161,49 @@
 
             <div class="content-body" id="dashboard-content">
 
-                <!-- Module 4: Timeline -->
-                <div class="module-card col-4" id="mod-timeline">
+                <!-- Module: Materials -->
+                <div class="module-card col-12" id="mod-materials" data-anchor="materials">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                        <h3 style="margin:0;">Materials</h3>
+                        <span style="font-size:0.8rem;color:var(--color-text-muted);">The Solaris Estate</span>
+                    </div>
+                    <div style="overflow-x:auto;">
+                        <table style="width:100%;border-collapse:collapse;font-size:0.875rem;">
+                            <thead>
+                                <tr style="border-bottom:2px solid var(--color-border);">
+                                    <th
+                                        style="text-align:left;padding:10px 16px;color:var(--color-text-muted);font-weight:500;font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.05em;text-transform:uppercase;">
+                                        Material</th>
+                                    <th
+                                        style="text-align:left;padding:10px 16px;color:var(--color-text-muted);font-weight:500;font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.05em;text-transform:uppercase;">
+                                        Supplier</th>
+
+                                    <th
+                                        style="text-align:left;padding:10px 16px;color:var(--color-text-muted);font-weight:500;font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.05em;text-transform:uppercase;">
+                                        Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="materials-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Module: Timeline -->
+                <div class="module-card col-4" id="mod-timeline" data-anchor="timeline">
                     <h3>Construction Timeline</h3>
                     <div id="calendar"></div>
                 </div>
-                <!-- Module 6: Sustainability -->
-                <div class="module-card col-4" id="mod-sustainability">
+
+                <!-- Module: Sustainability -->
+                <div class="module-card col-4" id="mod-sustainability" data-anchor="sustainability">
                     <h3>Sustainability Metrics</h3>
                     <canvas id="leedChart" height="200"></canvas>
                     <div id="sustainability-stats" style="display:flex;gap:1rem;margin-top:1rem;font-size:0.8rem;">
                     </div>
                 </div>
 
-                <!-- Module 7: Messaging -->
-                <div class="module-card col-4" id="mod-messages">
+                <!-- Module: Messaging -->
+                <div class="module-card col-4" id="mod-messages" data-anchor="messages">
                     <h3>Project Messaging</h3>
                     <div class="chat-container" id="chat-thread"></div>
                     <div style="display:flex;gap:10px;margin-top:15px;">
@@ -184,11 +212,6 @@
                         <button class="btn btn-primary" style="padding:10px 16px;" onclick="sendMessage()">Send</button>
                     </div>
                 </div>
-
-
-
-
-
 
             </div>
         </main>
@@ -220,6 +243,7 @@
             renderCharts(project.sustainabilityScores);
             renderMessages(project.messages);
             initSidebarToggle();
+            initSidebarLinks();
             initTheme();
         }
 
@@ -272,17 +296,22 @@
         }
 
         function renderMaterials(materials) {
-            const el = document.getElementById('material-list');
-            if (!el) return;
-            el.innerHTML = materials.map(m => {
-                const statusColor = m.status === 'Approved' ? 'var(--color-green)' :
-                    m.status === 'Pending' ? 'var(--color-brass)' : '#8c4a4a';
-                return `<div class="material-card">
-                    <img src="${m.image}" class="material-swatch" alt="${m.name}">
-                    <p style="font-size:0.8rem;font-weight:600;margin-top:8px;">${m.name}</p>
-                    <p class="text-muted" style="font-size:0.72rem;">${m.supplier}</p>
-                    <span style="font-size:0.72rem;color:${statusColor};font-weight:500;">${m.status}</span>
-                </div>`;
+            const tbody = document.getElementById('materials-table-body');
+            if (!tbody) return;
+            tbody.innerHTML = materials.map((m, i) => {
+                const statusColor = m.status === 'Approved' ? '#3b6b52' : m.status === 'Pending' ? 'var(--color-brass)' : '#8c4a4a';
+                const statusBg = m.status === 'Approved' ? 'rgba(59,107,82,0.15)' : m.status === 'Pending' ? 'rgba(184,151,90,0.15)' : 'rgba(140,74,74,0.15)';
+                const rowBg = i % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.02)';
+                return `<tr style="border-bottom:1px solid var(--color-border);background:${rowBg};transition:background 0.2s;"
+                    onmouseover="this.style.background='rgba(59,107,82,0.06)'"
+                    onmouseout="this.style.background='${rowBg}'">
+                    <td style="padding:14px 16px;font-weight:500;color:var(--color-text);">${m.name}</td>
+                    <td style="padding:14px 16px;color:var(--color-text-muted);">${m.supplier}</td>
+                   
+                    <td style="padding:14px 16px;">
+                        <span style="padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;background:${statusBg};color:${statusColor};">${m.status}</span>
+                    </td>
+                </tr>`;
             }).join('');
         }
 
@@ -381,6 +410,33 @@
 
             closeBtn?.addEventListener('click', closeSidebar);
             overlay?.addEventListener('click', closeSidebar);
+        }
+        function initSidebarLinks() {
+            const links = document.querySelectorAll('.sidebar-link[data-section]');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // highlight active
+                    links.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                    // scroll to section
+                    const target = document.querySelector(`[data-anchor="${link.dataset.section}"]`);
+                    if (target) {
+                        const offset = target.getBoundingClientRect().top + window.scrollY - 100;
+                        window.scrollTo({ top: offset, behavior: 'smooth' });
+                    }
+                    // close sidebar on mobile
+                    if (sidebar.classList.contains('active')) {
+                        sidebar.classList.remove('active');
+                        overlay.style.display = 'none';
+                        if (closeBtn) closeBtn.style.display = 'none';
+                    }
+                });
+            });
         }
     </script>
     <button id="scroll-to-top" aria-label="Scroll to top">

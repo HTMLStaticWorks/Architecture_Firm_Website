@@ -195,6 +195,28 @@ h4,
     text-align: center;
 }
 
+/* Expertise card hover */
+.services-grid .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+}
+
+.services-grid .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(59, 107, 82, 0.15);
+    border-color: var(--color-green);
+}
+
+.services-grid .card:hover .text-green {
+    transform: scale(1.2);
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+body.light-mode .services-grid .card:hover {
+    box-shadow: 0 20px 40px rgba(59, 107, 82, 0.12);
+}
+
 .card:hover {
     border-color: var(--color-green);
     transform: translateY(-5px);
@@ -295,22 +317,27 @@ img {
     }
 }
 
+
 /* Theme Toggle Button */
 .theme-btn {
     background: none;
     border: none;
     cursor: pointer;
     color: var(--color-text);
-    padding: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    flex-shrink: 0;
     transition: var(--transition-fast);
 }
 
 .theme-btn:hover {
-    background-color: var(--color-surface);
+    background-color: rgba(59, 107, 82, 0.15);
+    color: var(--color-green);
 }
 
 .hamburger {
@@ -1175,4 +1202,35 @@ body:not(.light-mode) .navbar .logo-img {
 
 .service-card-overlay ul li {
     color: rgba(255, 255, 255, 0.85);
+}
+
+/* Project Stories Section */
+.project-story-card img {
+    transition: transform 0.5s ease;
+}
+
+.project-story-card:hover img {
+    transform: scale(1.06);
+}
+
+.project-story-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(5, 15, 10, 0.85) 40%, rgba(5, 15, 10, 0.1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-story-card:hover .project-story-overlay {
+    opacity: 1;
+}
+
+@media (max-width: 560px) {
+    .project-stories-grid {
+        grid-template-columns: 1fr !important;
+    }
 }

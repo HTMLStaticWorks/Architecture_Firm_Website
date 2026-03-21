@@ -320,3 +320,23 @@ body.light-mode .toggle-icon-light {
 body.light-mode .toggle-track {
     background: #e8f0ea;
 }
+
+@media (max-width: 480px) {
+    .module-card {
+        padding: 16px;
+    }
+
+    #mod-materials table {
+        font-size: 0.78rem;
+    }
+
+    #mod-materials td,
+    #mod-materials th {
+        padding: 10px 8px;
+    }
+
+    #mod-materials td:last-child span {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+    }
+}
