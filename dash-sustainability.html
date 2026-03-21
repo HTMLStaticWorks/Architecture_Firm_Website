@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overview | Arkigreen Client Portal</title>
+    <title>Sustainability | Arkigreen Client Portal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/dashboard.css">
@@ -30,7 +31,7 @@
                     </svg></button>
             </div>
             <nav class="sidebar-nav">
-                <a href="dashboard.html" class="sidebar-link active">
+                <a href="dashboard.html" class="sidebar-link">
                     <span class="sidebar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8">
                             <rect x="3" y="3" width="7" height="7" />
@@ -57,7 +58,7 @@
                         </svg></span>
                     <span class="sidebar-text">Timeline</span>
                 </a>
-                <a href="dash-sustainability.html" class="sidebar-link">
+                <a href="dash-sustainability.html" class="sidebar-link active">
                     <span class="sidebar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8">
                             <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
@@ -128,164 +129,87 @@
             </header>
 
             <div class="content-body">
-                <!-- Welcome Banner -->
-                <div class="module-card col-12"
-                    style="background:linear-gradient(135deg,#2d5a41 0%,#1e3d2c 100%);border:none;">
-                    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
-                        <div>
-                            <p
-                                style="font-size:0.75rem;letter-spacing:0.2em;color:rgba(255,255,255,0.6);margin-bottom:6px;text-transform:uppercase;">
-                                Welcome Back</p>
-                            <h2 class="display-font" style="color:#fff;font-size:2rem;margin:0;">The Solaris Estate</h2>
-                            <p style="color:rgba(255,255,255,0.7);margin-top:6px;font-size:0.9rem;">Project PRJ-001 ·
-                                Structural Integration Phase</p>
-                        </div>
-                        <span
-                            style="padding:6px 18px;background:rgba(255,255,255,0.12);border-radius:20px;font-size:0.8rem;color:#fff;font-weight:600;border:1px solid rgba(255,255,255,0.25);">In
-                            Progress</span>
-                    </div>
-                </div>
-
                 <!-- Stat Cards -->
-                <div class="module-card col-3" style="text-align:center;">
-                    <p
-                        style="font-size:0.72rem;letter-spacing:0.12em;color:var(--color-text-muted);text-transform:uppercase;margin-bottom:8px;">
-                        Completion</p>
-                    <h2
-                        style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--color-green);margin:0 0 10px;">
-                        65%</h2>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width:65%"></div>
-                    </div>
-                </div>
-                <div class="module-card col-3" style="text-align:center;">
+                <div class="module-card col-4" style="text-align:center;">
                     <p
                         style="font-size:0.72rem;letter-spacing:0.12em;color:var(--color-text-muted);text-transform:uppercase;margin-bottom:8px;">
                         LEED Score</p>
                     <h2
-                        style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--color-brass);margin:0 0 6px;">
+                        style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--color-green);margin:0 0 6px;">
                         82</h2>
-                    <p style="font-size:0.78rem;color:var(--color-text-muted);">Platinum Target</p>
+                    <p style="font-size:0.78rem;color:var(--color-text-muted);">Platinum Target (80+)</p>
                 </div>
-                <div class="module-card col-3" style="text-align:center;">
+                <div class="module-card col-4" style="text-align:center;">
                     <p
                         style="font-size:0.72rem;letter-spacing:0.12em;color:var(--color-text-muted);text-transform:uppercase;margin-bottom:8px;">
                         CO₂ Offset</p>
                     <h2
-                        style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--color-brass);margin:0 0 6px;">
+                        style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--color-brass);margin:0 0 6px;">
                         450t</h2>
-                    <p style="font-size:0.78rem;color:var(--color-text-muted);">This project</p>
-                </div>
-                <div class="module-card col-3" style="text-align:center;">
-                    <p
-                        style="font-size:0.72rem;letter-spacing:0.12em;color:var(--color-text-muted);text-transform:uppercase;margin-bottom:8px;">
-                        Energy Eff.</p>
-                    <h2
-                        style="font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--color-text);margin:0 0 6px;">
-                        94%</h2>
-                    <p style="font-size:0.78rem;color:var(--color-text-muted);">Above benchmark</p>
+                    <p style="font-size:0.78rem;color:var(--color-text-muted);">Tonnes this project</p>
                 </div>
 
-                <!-- Project Details -->
-                <div class="module-card col-6">
-                    <h3>Project Details</h3>
-                    <div style="display:flex;flex-direction:column;gap:0;margin-top:8px;">
+
+                <!-- Chart + breakdown -->
+                <div class="module-card col-6" style="align-items:center;">
+                    <h3>LEED Score Breakdown</h3>
+                    <div style="position:relative;width:240px;margin:16px auto;">
+                        <canvas id="leedChart"></canvas>
                         <div
-                            style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--color-border);">
-                            <span class="text-muted" style="font-size:0.85rem;">Project Manager</span>
-                            <span style="font-weight:500;">Sarah Jenkins</span>
-                        </div>
-                        <div
-                            style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--color-border);">
-                            <span class="text-muted" style="font-size:0.85rem;">Current Phase</span>
-                            <span style="font-weight:500;">Structural Integration</span>
-                        </div>
-                        <div
-                            style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--color-border);">
-                            <span class="text-muted" style="font-size:0.85rem;">Project ID</span>
-                            <span style="font-weight:500;font-family:'Cormorant Garamond',serif;">PRJ-001</span>
-                        </div>
-                        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;">
-                            <span class="text-muted" style="font-size:0.85rem;">Status</span>
+                            style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
                             <span
-                                style="padding:3px 12px;background:rgba(59,107,82,0.15);color:var(--color-green);border-radius:20px;font-size:0.78rem;font-weight:600;">In
-                                Progress</span>
+                                style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--color-green);">82</span>
+                            <span style="font-size:0.72rem;color:var(--color-text-muted);letter-spacing:0.1em;">/
+                                100</span>
                         </div>
                     </div>
-                    <a href="dash-messages.html" class="btn btn-outline"
-                        style="width:100%;text-align:center;margin-top:8px;">Contact Project Manager</a>
+                    <p style="font-size:0.82rem;color:var(--color-text-muted);text-align:center;">On track for LEED
+                        Platinum certification upon project completion.</p>
                 </div>
 
-                <!-- Quick Access -->
                 <div class="module-card col-6">
-                    <h3>Quick Access</h3>
-                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
-                        <a href="dash-materials.html" class="dash-quick-link">
-                            <span class="dash-quick-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
-                                </svg></span>
-                            <div>
-                                <p style="font-weight:500;font-size:0.9rem;margin:0;">Materials</p>
-                                <p style="font-size:0.78rem;color:var(--color-text-muted);margin:2px 0 0;">3 items · 1
-                                    needs revision</p>
+                    <h3>Sustainability Breakdown</h3>
+                    <div style="display:flex;flex-direction:column;gap:0;margin-top:8px;">
+                        <div style="padding:14px 0;border-bottom:1px solid var(--color-border);">
+                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                                <span style="font-size:0.85rem;">Energy Efficiency</span>
+                                <span style="font-weight:600;color:var(--color-green);">94%</span>
                             </div>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" style="margin-left:auto;color:var(--color-text-muted);flex-shrink:0;">
-                                <path d="M9 18l6-6-6-6" />
-                            </svg>
-                        </a>
-                        <a href="dash-timeline.html" class="dash-quick-link">
-                            <span class="dash-quick-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" />
-                                    <line x1="16" y1="2" x2="16" y2="6" />
-                                    <line x1="8" y1="2" x2="8" y2="6" />
-                                    <line x1="3" y1="10" x2="21" y2="10" />
-                                </svg></span>
-                            <div>
-                                <p style="font-weight:500;font-size:0.9rem;margin:0;">Timeline</p>
-                                <p style="font-size:0.78rem;color:var(--color-text-muted);margin:2px 0 0;">Structural
-                                    Framing active</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:94%"></div>
                             </div>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" style="margin-left:auto;color:var(--color-text-muted);flex-shrink:0;">
-                                <path d="M9 18l6-6-6-6" />
-                            </svg>
-                        </a>
-                        <a href="dash-sustainability.html" class="dash-quick-link">
-                            <span class="dash-quick-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                                </svg></span>
-                            <div>
-                                <p style="font-weight:500;font-size:0.9rem;margin:0;">Sustainability</p>
-                                <p style="font-size:0.78rem;color:var(--color-text-muted);margin:2px 0 0;">LEED: 82 ·
-                                    Energy: 94%</p>
+                        </div>
+                        <div style="padding:14px 0;border-bottom:1px solid var(--color-border);">
+                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                                <span style="font-size:0.85rem;">Water Conservation</span>
+                                <span style="font-weight:600;color:var(--color-green);">78%</span>
                             </div>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" style="margin-left:auto;color:var(--color-text-muted);flex-shrink:0;">
-                                <path d="M9 18l6-6-6-6" />
-                            </svg>
-                        </a>
-                        <a href="dash-messages.html" class="dash-quick-link">
-                            <span class="dash-quick-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                                </svg></span>
-                            <div>
-                                <p style="font-weight:500;font-size:0.9rem;margin:0;">Messages</p>
-                                <p style="font-size:0.78rem;color:var(--color-text-muted);margin:2px 0 0;">2 messages
-                                    from Sarah Jenkins</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:78%"></div>
                             </div>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" style="margin-left:auto;color:var(--color-text-muted);flex-shrink:0;">
-                                <path d="M9 18l6-6-6-6" />
-                            </svg>
-                        </a>
+                        </div>
+                        <div style="padding:14px 0;border-bottom:1px solid var(--color-border);">
+                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                                <span style="font-size:0.85rem;">Recycled Materials</span>
+                                <span style="font-weight:600;color:var(--color-brass);">65%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:65%;background:var(--color-brass);"></div>
+                            </div>
+                        </div>
+                        <div style="padding:14px 0;">
+                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                                <span style="font-size:0.85rem;">Carbon Offset Progress</span>
+                                <span style="font-weight:600;color:var(--color-green);">88%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:88%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
         </main>
     </div>
@@ -298,7 +222,11 @@
                 document.body.classList.toggle('light-mode');
                 localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
             });
-
+            new Chart(document.getElementById('leedChart').getContext('2d'), {
+                type: 'doughnut',
+                data: { labels: ['Score', 'Remaining'], datasets: [{ data: [82, 18], backgroundColor: ['#3b6b52', '#2a3d33'], borderWidth: 0 }] },
+                options: { cutout: '80%', plugins: { legend: { display: false } } }
+            });
         });
 
         function initTheme() {

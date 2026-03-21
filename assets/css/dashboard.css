@@ -10,23 +10,56 @@
     overflow-x: hidden;
 }
 
-/* Sidebar */
+/* Sidebar — persistent on desktop/tablet */
 .sidebar {
     width: 260px;
     background-color: var(--color-surface);
     border-right: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease;
     flex-shrink: 0;
     z-index: 1001;
-    position: fixed;
-    left: -260px;
     height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.sidebar.active {
-    left: 0;
+/* Mobile only — slide-in overlay */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100vh;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+}
+
+/* Hide hamburger toggle on desktop/tablet */
+#toggle-sidebar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #toggle-sidebar {
+        display: flex;
+    }
+}
+
+/* Hide close button inside sidebar on desktop */
+#close-sidebar {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    #close-sidebar {
+        display: flex !important;
+    }
 }
 
 
@@ -71,7 +104,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    min-width: 0;
+    margin-left: 260px;
 }
 
 .top-bar {
@@ -82,13 +116,44 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 260px;
+    z-index: 100;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.top-bar-welcome {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar-welcome span:first-child {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+}
+
+.top-bar-welcome span:last-child {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    line-height: 1.2;
 }
 
 .content-body {
-    padding: 40px;
+    padding: 48px 40px 60px;
+    padding-top: 112px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
+    gap: 28px;
 }
 
 /* Module Cards */
@@ -96,10 +161,10 @@
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
-    padding: 24px;
+    padding: 28px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
 }
 
 .col-12 {
@@ -338,5 +403,87 @@ body.light-mode .toggle-track {
     #mod-materials td:last-child span {
         padding: 3px 8px;
         font-size: 0.7rem;
+    }
+}
+
+/* Quick Access Links - Overview Page */
+.dash-quick-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    background: var(--color-primary);
+    border-radius: var(--radius-df);
+    border: 1px solid var(--color-border);
+    transition: border-color 0.2s, background 0.2s;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.dash-quick-link:hover {
+    border-color: var(--color-green);
+    background: rgba(59, 107, 82, 0.05);
+    color: var(--color-text);
+}
+
+.dash-quick-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(59, 107, 82, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-green);
+    flex-shrink: 0;
+}
+
+/* col-3 for overview stat cards */
+.col-3 {
+    grid-column: span 3;
+}
+
+@media (max-width: 1280px) {
+    .col-3 {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-3 {
+        grid-column: span 12;
+    }
+}
+
+/* On desktop/tablet sidebar is persistent - no margin needed since flexbox handles it */
+/* On mobile, add top padding since sidebar is overlay */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 0 20px;
+    }
+
+    .top-bar-welcome {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        left: 0;
+    }
+
+    .dashboard-main {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-body {
+        padding: 88px 16px 40px;
+        gap: 16px;
+    }
+
+    .module-card {
+        padding: 20px;
     }
 }
