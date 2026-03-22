@@ -76,6 +76,16 @@
                     <input type="password" id="password" class="form-input" placeholder="••••••••" required>
                 </div>
 
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+                    <label style="display:flex;align-items:center;gap:8px;font-size:0.85rem;cursor:pointer;">
+                        <input type="checkbox" id="remember-me"
+                            style="width:16px;height:16px;accent-color:var(--color-green);cursor:pointer;">
+                        Remember me
+                    </label>
+                    <a href="#" style="font-size:0.85rem;color:var(--color-green);text-decoration:none;">Forgot
+                        password?</a>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Login</button>
             </form>
 
@@ -87,8 +97,10 @@
                         style="width: 18px; margin-right: 10px;">
                     Continue with Google
                 </button>
-                <button class="btn btn-email-link">
-                    Continue with Email
+                <button class="btn btn-google" style="display:flex;align-items:center;justify-content:center;gap:10px;">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"
+                        style="width:18px;height:18px;">
+                    Continue with Google
                 </button>
             </div>
 
