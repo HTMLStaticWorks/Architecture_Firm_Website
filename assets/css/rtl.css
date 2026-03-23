@@ -2,7 +2,6 @@
     ARKIGREEN - RTL Support
     Applied to [dir="rtl"] body
 */
-
 [dir="rtl"] {
     text-align: right;
 }
@@ -21,7 +20,7 @@
 }
 
 [dir="rtl"] .nav-links {
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -41,4 +40,16 @@
 [dir="rtl"] .contact-item {
     flex-direction: row-reverse;
     text-align: right;
+}
+
+[dir="rtl"] .nav-container {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-links {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-actions {
+    flex-direction: row-reverse;
 }
