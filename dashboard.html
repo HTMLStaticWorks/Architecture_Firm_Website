@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 </head>
 
@@ -24,6 +25,7 @@
             <div class="sidebar-header" style="display:flex;align-items:center;justify-content:space-between;">
                 <a href="index.html" style="text-decoration:none;line-height:0;"><img src="assets/images/logo.svg"
                         alt="Arkigreen" style="height:30px;width:auto;display:block;"></a>
+                <button id="rtl-toggle-mobile" class="theme-btn rtl-toggle" aria-label="Toggle RTL" style="padding:8px; font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px; margin-right: 8px;">RTL</button>
                 <button id="close-sidebar" class="theme-btn" style="padding:8px;display:none;" aria-label="Close"><svg
                         width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 6L6 18M6 6l12 12" />
@@ -102,6 +104,7 @@
                     </div>
                 </div>
                 <div style="display:flex;align-items:center;gap:16px;">
+                    <button id="rtl-toggle" class="theme-btn rtl-toggle" aria-label="Toggle RTL" style="font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px;">RTL</button>
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
                         <span class="toggle-track"><span class="toggle-thumb"></span>
                             <span class="toggle-icon toggle-icon-dark"><svg width="12" height="12" viewBox="0 0 24 24"
@@ -294,6 +297,23 @@
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
             initSidebarToggle();
+            
+            // RTL Logic
+            if (localStorage.getItem('rtl') === 'true') {
+                document.documentElement.setAttribute('dir', 'rtl');
+            }
+            const toggleRTL = () => {
+                const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+                if (isRTL) {
+                    document.documentElement.setAttribute('dir', 'ltr');
+                    localStorage.setItem('rtl', 'false');
+                } else {
+                    document.documentElement.setAttribute('dir', 'rtl');
+                    localStorage.setItem('rtl', 'true');
+                }
+            };
+            document.getElementById('rtl-toggle')?.addEventListener('click', toggleRTL);
+            document.getElementById('rtl-toggle-mobile')?.addEventListener('click', toggleRTL);
             document.getElementById('theme-toggle')?.addEventListener('click', () => {
                 document.body.classList.toggle('light-mode');
                 localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');

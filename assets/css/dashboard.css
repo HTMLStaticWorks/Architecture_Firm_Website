@@ -487,3 +487,16 @@ body.light-mode .toggle-track {
         padding: 20px;
     }
 }
+
+/* RTL Responsive */
+#rtl-toggle-mobile {
+    display: none;
+}
+@media (max-width: 768px) {
+    #rtl-toggle {
+        display: none !important;
+    }
+    #rtl-toggle-mobile {
+        display: flex !important;
+    }
+}

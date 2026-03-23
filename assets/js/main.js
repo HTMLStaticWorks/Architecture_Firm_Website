@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
+    initRTL();
     initMobileMenu();
     initAnimations();
     initScrollTop();
@@ -49,6 +50,30 @@ function initTheme() {
 
     if (desktopToggle) desktopToggle.addEventListener('click', toggleTheme);
     if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
+}
+
+/* RTL Toggle */
+function initRTL() {
+    if (localStorage.getItem('rtl') === 'true') {
+        document.documentElement.setAttribute('dir', 'rtl');
+    }
+
+    const desktopToggle = document.getElementById('rtl-toggle');
+    const mobileToggle = document.getElementById('rtl-toggle-mobile');
+
+    function toggleRTL() {
+        const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        if (isRTL) {
+            document.documentElement.setAttribute('dir', 'ltr');
+            localStorage.setItem('rtl', 'false');
+        } else {
+            document.documentElement.setAttribute('dir', 'rtl');
+            localStorage.setItem('rtl', 'true');
+        }
+    }
+
+    if (desktopToggle) desktopToggle.addEventListener('click', toggleRTL);
+    if (mobileToggle) mobileToggle.addEventListener('click', toggleRTL);
 }
 
 /* Mobile Drawer */
