@@ -846,7 +846,8 @@ section {
 .footer {
     background-color: var(--color-surface);
     padding: calc(var(--base-unit) * 10) 0 calc(var(--base-unit) * 4);
-    margin-top: calc(var(--base-unit) * 10);
+    margin-top: 0;
+    /* was calc(var(--base-unit) * 10) */
     border-top: 1px solid var(--color-border);
 }
 
@@ -1281,4 +1282,15 @@ main,
 img {
     max-width: 100%;
     height: auto;
+}
+
+.service-card-overlay h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    /* adjust this value to your liking */
+}
+
+.btn-brass:hover {
+    color: #1a1a1a;
+    /* dark text on the light brass hover background */
 }
