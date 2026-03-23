@@ -315,10 +315,9 @@ img {
     gap: calc(var(--base-unit) * 3);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
     #login-btn {
         display: none;
-        /* Hide login on very small screens, keep in drawer */
     }
 }
 
