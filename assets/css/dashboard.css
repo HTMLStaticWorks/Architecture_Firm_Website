@@ -492,11 +492,34 @@ body.light-mode .toggle-track {
 #rtl-toggle-mobile {
     display: none;
 }
+
 @media (max-width: 768px) {
     #rtl-toggle {
         display: none !important;
     }
+
     #rtl-toggle-mobile {
         display: flex !important;
     }
+}
+
+.fc-event,
+.fc-event-main,
+.fc-daygrid-event {
+    background-color: var(--color-green) !important;
+    border-color: var(--color-green) !important;
+}
+
+.fc-day-today {
+    background-color: rgba(59, 107, 82, 0.1) !important;
+}
+
+.fc-button-primary {
+    background-color: var(--color-green) !important;
+    border-color: var(--color-green) !important;
+}
+
+.fc-button-primary:hover {
+    background-color: #4a8266 !important;
+    border-color: #4a8266 !important;
 }

@@ -26,7 +26,8 @@
             <div class="sidebar-header" style="display:flex;align-items:center;justify-content:space-between;">
                 <a href="index.html" style="text-decoration:none;line-height:0;"><img src="assets/images/logo.svg"
                         alt="Arkigreen" style="height:30px;width:auto;display:block;"></a>
-                <button id="rtl-toggle-mobile" class="theme-btn rtl-toggle" aria-label="Toggle RTL" style="padding:8px; font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px; margin-right: 8px;">RTL</button>
+                <button id="rtl-toggle-mobile" class="theme-btn rtl-toggle" aria-label="Toggle RTL"
+                    style="padding:8px; font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px; margin-right: 8px;">RTL</button>
                 <button id="close-sidebar" class="theme-btn" style="padding:8px;display:none;" aria-label="Close"><svg
                         width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 6L6 18M6 6l12 12" />
@@ -105,7 +106,8 @@
                     </div>
                 </div>
                 <div style="display:flex;align-items:center;gap:16px;">
-                    <button id="rtl-toggle" class="theme-btn rtl-toggle" aria-label="Toggle RTL" style="font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px;">RTL</button>
+                    <button id="rtl-toggle" class="theme-btn rtl-toggle" aria-label="Toggle RTL"
+                        style="font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px;">RTL</button>
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
                         <span class="toggle-track"><span class="toggle-thumb"></span>
                             <span class="toggle-icon toggle-icon-dark"><svg width="12" height="12" viewBox="0 0 24 24"
@@ -150,8 +152,8 @@
                                 style="width:10px;height:10px;border-radius:50%;background:var(--color-green);flex-shrink:0;"></span>
                             <div style="flex:1;">
                                 <p style="font-weight:500;margin:0;">Groundbreaking</p>
-                                <p style="font-size:0.8rem;color:var(--color-text-muted);margin:2px 0 0;">Jan 15, 2026
-                                </p>
+                                <p style="font-size:0.8rem;color:var(--color-text);margin:2px 0 0;font-weight:400;">
+                                    Jan 15, 2026</p>
                             </div>
                             <span
                                 style="padding:3px 12px;background:rgba(59,107,82,0.15);color:var(--color-green);border-radius:20px;font-size:0.75rem;font-weight:600;">Completed</span>
@@ -162,7 +164,7 @@
                                 style="width:10px;height:10px;border-radius:50%;background:var(--color-green);flex-shrink:0;"></span>
                             <div style="flex:1;">
                                 <p style="font-weight:500;margin:0;">Foundation Pour</p>
-                                <p style="font-size:0.8rem;color:var(--color-text-muted);margin:2px 0 0;">Feb 20 – Feb
+                                <p style="font-size:0.8rem;color:var(--color-text);margin:2px 0 0;">Feb 20 – Feb
                                     28, 2026</p>
                             </div>
                             <span
@@ -174,7 +176,7 @@
                                 style="width:10px;height:10px;border-radius:50%;background:var(--color-brass);flex-shrink:0;box-shadow:0 0 0 3px rgba(184,151,90,0.2);"></span>
                             <div style="flex:1;">
                                 <p style="font-weight:500;margin:0;">Structural Framing</p>
-                                <p style="font-size:0.8rem;color:var(--color-text-muted);margin:2px 0 0;">Mar 10 – Apr
+                                <p style="font-size:0.8rem;color:var(--color-text);margin:2px 0 0;">Mar 10 – Apr
                                     15, 2026</p>
                             </div>
                             <span
@@ -185,8 +187,8 @@
                             <span
                                 style="width:10px;height:10px;border-radius:50%;background:var(--color-border);flex-shrink:0;"></span>
                             <div style="flex:1;">
-                                <p style="font-weight:500;margin:0;color:var(--color-text-muted);">MEP Installation</p>
-                                <p style="font-size:0.8rem;color:var(--color-text-muted);margin:2px 0 0;">Apr 16 – Jun
+                                <p style="font-weight:500;margin:0;">MEP Installation</p>
+                                <p style="font-size:0.8rem;color:var(--color-text);margin:2px 0 0;">Apr 16 – Jun
                                     30, 2026</p>
                             </div>
                             <span
@@ -196,8 +198,8 @@
                             <span
                                 style="width:10px;height:10px;border-radius:50%;background:var(--color-border);flex-shrink:0;"></span>
                             <div style="flex:1;">
-                                <p style="font-weight:500;margin:0;color:var(--color-text-muted);">Final Handover</p>
-                                <p style="font-size:0.8rem;color:var(--color-text-muted);margin:2px 0 0;">Aug 2026</p>
+                                <p style="font-weight:500;margin:0;">Final Handover</p>
+                                <p style="font-size:0.8rem;color:var(--color-text);margin:2px 0 0;">Aug 2026</p>
                             </div>
                             <span
                                 style="padding:3px 12px;background:rgba(255,255,255,0.05);color:var(--color-text-muted);border-radius:20px;font-size:0.75rem;font-weight:600;">Upcoming</span>
@@ -212,7 +214,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
             initSidebarToggle();
-            
+
             // RTL Logic
             if (localStorage.getItem('rtl') === 'true') {
                 document.documentElement.setAttribute('dir', 'rtl');

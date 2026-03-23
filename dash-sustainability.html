@@ -26,7 +26,8 @@
             <div class="sidebar-header" style="display:flex;align-items:center;justify-content:space-between;">
                 <a href="index.html" style="text-decoration:none;line-height:0;"><img src="assets/images/logo.svg"
                         alt="Arkigreen" style="height:30px;width:auto;display:block;"></a>
-                <button id="rtl-toggle-mobile" class="theme-btn rtl-toggle" aria-label="Toggle RTL" style="padding:8px; font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px; margin-right: 8px;">RTL</button>
+                <button id="rtl-toggle-mobile" class="theme-btn rtl-toggle" aria-label="Toggle RTL"
+                    style="padding:8px; font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px; margin-right: 8px;">RTL</button>
                 <button id="close-sidebar" class="theme-btn" style="padding:8px;display:none;" aria-label="Close"><svg
                         width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 6L6 18M6 6l12 12" />
@@ -105,7 +106,8 @@
                     </div>
                 </div>
                 <div style="display:flex;align-items:center;gap:16px;">
-                    <button id="rtl-toggle" class="theme-btn rtl-toggle" aria-label="Toggle RTL" style="font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px;">RTL</button>
+                    <button id="rtl-toggle" class="theme-btn rtl-toggle" aria-label="Toggle RTL"
+                        style="font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px;">RTL</button>
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
                         <span class="toggle-track"><span class="toggle-thumb"></span>
                             <span class="toggle-icon toggle-icon-dark"><svg width="12" height="12" viewBox="0 0 24 24"
@@ -140,7 +142,7 @@
                     <h2
                         style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--color-green);margin:0 0 6px;">
                         82</h2>
-                    <p style="font-size:0.78rem;color:var(--color-text-muted);">Platinum Target (80+)</p>
+                    <p style="font-size:0.92rem;color:var(--color-text);font-weight:400;">Platinum Target (80+)</p>
                 </div>
                 <div class="module-card col-4" style="text-align:center;">
                     <p
@@ -149,13 +151,15 @@
                     <h2
                         style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--color-brass);margin:0 0 6px;">
                         450t</h2>
-                    <p style="font-size:0.78rem;color:var(--color-text-muted);">Tonnes this project</p>
+                    <p style="font-size:0.92rem;color:var(--color-text);font-weight:400;">Tonnes this project</p>
                 </div>
 
 
                 <!-- Chart + breakdown -->
                 <div class="module-card col-6" style="align-items:center;">
-                    <h3>LEED Score Breakdown</h3>
+                    <h3
+                        style="font-size:0.72rem;letter-spacing:0.12em;color:var(--color-text-muted);text-transform:uppercase;font-weight:700;font-family:'DM Sans',sans-serif;">
+                        LEED Score Breakdown</h3>
                     <div style="position:relative;width:240px;margin:16px auto;">
                         <canvas id="leedChart"></canvas>
                         <div
@@ -166,12 +170,14 @@
                                 100</span>
                         </div>
                     </div>
-                    <p style="font-size:0.82rem;color:var(--color-text-muted);text-align:center;">On track for LEED
-                        Platinum certification upon project completion.</p>
+                    <p style="font-size:0.92rem;color:var(--color-text);font-weight:400;">On track for LEED
+                        Platinum certification upon completion.</p>
                 </div>
 
                 <div class="module-card col-6">
-                    <h3>Sustainability Breakdown</h3>
+                    <h3
+                        style="font-size:0.72rem;letter-spacing:0.12em;color:var(--color-text-muted);text-transform:uppercase;font-weight:700;font-family:'DM Sans',sans-serif;text-align:center;">
+                        Sustainability Breakdown</h3>
                     <div style="display:flex;flex-direction:column;gap:0;margin-top:8px;">
                         <div style="padding:14px 0;border-bottom:1px solid var(--color-border);">
                             <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
@@ -221,7 +227,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
             initSidebarToggle();
-            
+
             // RTL Logic
             if (localStorage.getItem('rtl') === 'true') {
                 document.documentElement.setAttribute('dir', 'rtl');

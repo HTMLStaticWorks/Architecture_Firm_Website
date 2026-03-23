@@ -25,7 +25,8 @@
             <div class="sidebar-header" style="display:flex;align-items:center;justify-content:space-between;">
                 <a href="index.html" style="text-decoration:none;line-height:0;"><img src="assets/images/logo.svg"
                         alt="Arkigreen" style="height:30px;width:auto;display:block;"></a>
-                <button id="rtl-toggle-mobile" class="theme-btn rtl-toggle" aria-label="Toggle RTL" style="padding:8px; font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px; margin-right: 8px;">RTL</button>
+                <button id="rtl-toggle-mobile" class="theme-btn rtl-toggle" aria-label="Toggle RTL"
+                    style="padding:8px; font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px; margin-right: 8px;">RTL</button>
                 <button id="close-sidebar" class="theme-btn" style="padding:8px;display:none;" aria-label="Close"><svg
                         width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 6L6 18M6 6l12 12" />
@@ -104,7 +105,8 @@
                     </div>
                 </div>
                 <div style="display:flex;align-items:center;gap:16px;">
-                    <button id="rtl-toggle" class="theme-btn rtl-toggle" aria-label="Toggle RTL" style="font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px;">RTL</button>
+                    <button id="rtl-toggle" class="theme-btn rtl-toggle" aria-label="Toggle RTL"
+                        style="font-weight: 600; font-family: 'DM Sans', sans-serif; font-size: 14px;">RTL</button>
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
                         <span class="toggle-track"><span class="toggle-thumb"></span>
                             <span class="toggle-icon toggle-icon-dark"><svg width="12" height="12" viewBox="0 0 24 24"
@@ -140,7 +142,8 @@
                             SJ</div>
                         <div>
                             <p style="font-weight:600;font-size:0.9rem;margin:0;">Sarah Jenkins</p>
-                            <p style="font-size:0.78rem;color:var(--color-text-muted);margin:2px 0 0;">Project Manager ·
+                            <p style="font-size:0.78rem;color:var(--color-text-muted);margin:2px 0 0;font-weight:500;">
+                                Project Manager ·
                                 The Solaris Estate</p>
                         </div>
                         <span
@@ -166,7 +169,9 @@
                                 SJ</div>
                             <div>
                                 <p style="font-weight:600;font-size:0.88rem;margin:0;">Sarah Jenkins</p>
-                                <p style="font-size:0.76rem;color:var(--color-text-muted);margin:2px 0 0;">Project
+                                <p
+                                    style="font-size:0.76rem;font-weight:500;color:var(--color-text-muted);margin:2px 0 0;">
+                                    Project
                                     Manager</p>
                             </div>
                         </div>
@@ -177,7 +182,9 @@
                                 AK</div>
                             <div>
                                 <p style="font-weight:600;font-size:0.88rem;margin:0;">Amir Khatri</p>
-                                <p style="font-size:0.76rem;color:var(--color-text-muted);margin:2px 0 0;">Lead
+                                <p
+                                    style="font-size:0.76rem;font-weight:500;color:var(--color-text-muted);margin:2px 0 0;">
+                                    Lead
                                     Architect</p>
                             </div>
                         </div>
@@ -188,7 +195,8 @@
                                 LM</div>
                             <div>
                                 <p style="font-weight:600;font-size:0.88rem;margin:0;">Lena Marsh</p>
-                                <p style="font-size:0.76rem;color:var(--color-text-muted);margin:2px 0 0;">
+                                <p
+                                    style="font-size:0.76rem;font-weight:500;color:var(--color-text-muted);margin:2px 0 0;">
                                     Sustainability Consultant</p>
                             </div>
                         </div>
@@ -198,16 +206,19 @@
                         <h3 style="margin-bottom:12px;">Project Info</h3>
                         <div style="display:flex;flex-direction:column;gap:8px;">
                             <div style="display:flex;justify-content:space-between;">
-                                <span style="font-size:0.82rem;color:var(--color-text-muted);">Project</span>
+                                <span
+                                    style="font-size:0.82rem;font-weight:600;color:var(--color-text-muted);">Project</span>
                                 <span style="font-size:0.82rem;font-weight:500;">The Solaris Estate</span>
                             </div>
                             <div style="display:flex;justify-content:space-between;">
-                                <span style="font-size:0.82rem;color:var(--color-text-muted);">Phase</span>
+                                <span
+                                    style="font-size:0.82rem;font-weight:600;color:var(--color-text-muted);">Phase</span>
                                 <span style="font-size:0.82rem;font-weight:500;">Structural Framing</span>
                             </div>
                             <div style="display:flex;justify-content:space-between;">
-                                <span style="font-size:0.82rem;color:var(--color-text-muted);">Status</span>
-                                <span style="font-size:0.82rem;color:var(--color-green);font-weight:600;">In
+                                <span
+                                    style="font-size:0.82rem;font-weight:600;color:var(--color-text-muted);">Status</span>
+                                <<span style="font-size:0.82rem;font-weight:500;">In
                                     Progress</span>
                             </div>
                         </div>
@@ -221,7 +232,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
             initSidebarToggle();
-            
+
             // RTL Logic
             if (localStorage.getItem('rtl') === 'true') {
                 document.documentElement.setAttribute('dir', 'rtl');
@@ -251,9 +262,9 @@
             if (thread) {
                 thread.innerHTML = initialMessages.map(m => `
                     <div class="msg ${m.side}">
-                        <p style="font-size:0.75rem;opacity:0.6;margin-bottom:4px;">${m.sender}</p>
-                        <p>${m.text}</p>
-                        <span style="font-size:0.7rem;opacity:0.5;margin-top:5px;display:block;">${m.timestamp}</span>
+                        <p style="font-size:0.78rem;opacity:0.9;margin-bottom:4px;font-weight:600;">${m.sender}</p>
+<p style="font-weight:500;">${m.text}</p>
+<span style="font-size:0.75rem;opacity:0.8;margin-top:5px;display:block;font-weight:500;">${m.timestamp}</span>
                     </div>`).join('');
                 thread.scrollTop = thread.scrollHeight;
             }

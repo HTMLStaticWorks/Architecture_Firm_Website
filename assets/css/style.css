@@ -264,8 +264,10 @@ img {
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--color-border);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     background-color: var(--color-primary);
 }
@@ -1141,10 +1143,11 @@ body:not(.light-mode) .navbar .logo-img {
 .testimonial-card cite {
     display: block;
     margin-top: 1rem;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--color-brass);
     font-style: normal;
     letter-spacing: 0.05em;
+    font-weight: 600;
 }
 
 /* Service Cards with Overlay Effect */
@@ -1276,7 +1279,6 @@ main,
 .hero,
 .navbar {
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 img {
