@@ -299,7 +299,7 @@ img {
 }
 
 .nav-link {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-text-muted);
 }
@@ -316,6 +316,18 @@ img {
 }
 
 @media (max-width: 1024px) {
+    .nav-links {
+        gap: calc(var(--base-unit) * 2);
+    }
+    .nav-actions {
+        gap: calc(var(--base-unit) * 2);
+    }
+    .nav-link {
+        font-size: 0.9rem; /* Restore original for tab view */
+    }
+}
+
+@media (max-width: 768px) {
     #login-btn {
         display: none;
     }
@@ -642,14 +654,15 @@ section {
 
 /* Hero Section */
 .hero {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 0;
+    padding: 140px 0 80px;
     background: none;
-
 }
 
 .hero-content {

@@ -42,14 +42,4 @@
     text-align: right;
 }
 
-[dir="rtl"] .nav-container {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .nav-links {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .nav-actions {
-    flex-direction: row-reverse;
-}
+/* No row-reverse needed as direction: rtl handles flex flow naturally */
