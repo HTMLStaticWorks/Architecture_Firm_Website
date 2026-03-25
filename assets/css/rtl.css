@@ -42,4 +42,21 @@
     text-align: right;
 }
 
+[dir="rtl"] .auth-card {
+    direction: rtl;
+    text-align: center; /* keep header centered */
+}
+
+[dir="rtl"] .auth-form {
+    text-align: right;
+}
+
+[dir="rtl"] .form-group label {
+    text-align: right;
+}
+
+[dir="rtl"] .auth-footer {
+    text-align: center;
+}
+
 /* No row-reverse needed as direction: rtl handles flex flow naturally */
