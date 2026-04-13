@@ -327,11 +327,14 @@ img {
     .nav-links {
         gap: calc(var(--base-unit) * 2);
     }
+
     .nav-actions {
         gap: calc(var(--base-unit) * 2);
     }
+
     .nav-link {
-        font-size: 0.9rem; /* Restore original for tab view */
+        font-size: 0.9rem;
+        /* Restore original for tab view */
     }
 }
 
@@ -842,7 +845,7 @@ section {
 body.light-mode .auth-actions .theme-btn {
     background-color: #ffffff;
     border-color: #e0e6e2;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 @media (max-width: 768px) {
@@ -850,11 +853,11 @@ body.light-mode .auth-actions .theme-btn {
         top: 1rem;
         right: 1rem;
     }
-    
+
     [dir="rtl"] .auth-actions {
         left: 1rem;
     }
-    
+
     .auth-actions .theme-btn {
         width: 38px;
         height: 38px;
@@ -1244,7 +1247,7 @@ body:not(.light-mode) .navbar .logo-img {
     position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    min-height: 280px;
+    min-height: 420px;
     cursor: pointer;
     border: 1px solid var(--color-border);
     transition: border-color 0.3s ease;
@@ -1261,7 +1264,7 @@ body:not(.light-mode) .navbar .logo-img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 2rem;
     text-align: center;
     background-color: var(--color-surface);
