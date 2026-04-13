@@ -5,8 +5,8 @@
 
 :root {
     /* Color Palette */
-    --color-primary: #1a1f1c;
-    /* deep slate */
+    --color-primary: #000000;
+    /* black */
     --color-green: #3b6b52;
     /* forest green */
     --color-brass: #b8975a;
@@ -65,11 +65,18 @@ h4,
     line-height: 1.2;
 }
 
+p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
 /* Global Container */
 .container {
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0 calc(var(--base-unit) * 3);
+    padding: 0 calc(var(--base-unit) * 6);
 }
 
 /* Utilities */
