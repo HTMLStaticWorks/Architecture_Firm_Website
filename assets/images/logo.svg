@@ -1,14 +1,46 @@
-<svg width="460" height="110" viewBox="0 0 460 110" xmlns="http://www.w3.org/2000/svg">
-    <!-- Icon -->
-    <g transform="translate(20,20)">
-        <!-- Geometric leaf outline -->
-        <path d="M40 5 C65 25, 65 65, 40 85 C15 65, 15 25, 40 5 Z" stroke="#4a9968" stroke-width="2" fill="none"/>
-        <!-- Central vein -->
-        <line x1="40" y1="15" x2="40" y2="75" stroke="#4a9968" stroke-width="1.5"/>
-        <!-- Architectural lines -->
-        <line x1="28" y1="35" x2="52" y2="35" stroke="#4a9968" stroke-width="1.5"/>
-        <line x1="30" y1="50" x2="50" y2="50" stroke="#4a9968" stroke-width="1.5"/>
-    </g>
-    <!-- Text -->
-    <text x="110" y="68" font-family="Cormorant Garamond, Georgia, serif" font-size="44" font-weight="600" fill="#4a9968" letter-spacing="1">Arki<tspan fill="#4a9968">green</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" width="320" height="72">
+  <defs>
+    <style>
+      .logo-icon { fill: none; stroke: #2D5C3F; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .logo-icon-fill { fill: #2D5C3F; }
+      .text-arki {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 34px;
+        font-weight: 700;
+        fill: #2D5C3F;
+        letter-spacing: 2px;
+      }
+      .text-green {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 34px;
+        font-weight: 300;
+        fill: #2D5C3F;
+        letter-spacing: 3px;
+      }
+    </style>
+  </defs>
+
+  <!-- Arch icon: flat geometric arch, width 48, height 52 -->
+  <!-- Two vertical pillars + arch curve -->
+  <g transform="translate(4, 8)">
+    <!-- Left pillar -->
+    <rect class="logo-icon-fill" x="0" y="22" width="6" height="30" rx="0"/>
+    <!-- Right pillar -->
+    <rect class="logo-icon-fill" x="38" y="22" width="6" height="30" rx="0"/>
+    <!-- Arch: filled semicircle top, hollow inside -->
+    <!-- Outer arch path -->
+    <path class="logo-icon-fill" d="M0,24 A22,22 0 0,1 44,24 L38,24 A16,16 0 0,0 6,24 Z"/>
+    <!-- Leaf at top of arch -->
+    <!-- Leaf: a simple pointed oval shape sitting centered on top -->
+    <ellipse class="logo-icon-fill" cx="22" cy="5" rx="4.5" ry="8" transform="rotate(0,22,5)"/>
+    <!-- Leaf midrib (white line to give leaf detail) -->
+    <line x1="22" y1="1" x2="22" y2="12" stroke="white" stroke-width="1" stroke-linecap="round"/>
+    <!-- Small stem connecting leaf to arch top -->
+    <rect class="logo-icon-fill" x="20.5" y="12" width="3" height="5"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="66" y="50">
+    <tspan class="text-arki">ARKI</tspan><tspan class="text-green">GREEN</tspan>
+  </text>
 </svg>
