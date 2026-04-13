@@ -495,11 +495,11 @@ body.light-mode .toggle-track {
 
 @media (max-width: 768px) {
     #rtl-toggle {
-        display: none !important;
+        display: flex !important;
     }
 
     #rtl-toggle-mobile {
-        display: flex !important;
+        display: none !important;
     }
 }
 
